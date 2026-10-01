@@ -15,7 +15,6 @@
         app:surface_type="surface_view"
         app:use_controller="true" />
 
-    <!-- Extra Dim Overlay for Night Mode -->
     <View
         android:id="@+id/viewExtraDim"
         android:layout_width="match_parent"
@@ -25,7 +24,6 @@
         android:clickable="false"
         android:focusable="false" />
 
-    <!-- Left Side: Brightness Gesture HUD -->
     <LinearLayout
         android:id="@+id/hudBrightness"
         android:layout_width="wrap_content"
@@ -65,7 +63,6 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Right Side: Volume Gesture HUD (with Boost indicator) -->
     <LinearLayout
         android:id="@+id/hudVolume"
         android:layout_width="wrap_content"

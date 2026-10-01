@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="#66000000">
 
-    <!-- Top Bar: Back, Anime Title, Aspect Ratio -->
     <LinearLayout
         android:id="@+id/playerTopBar"
         android:layout_width="match_parent"
@@ -57,7 +56,6 @@
             android:src="@drawable/ic_aspect_ratio" />
     </LinearLayout>
 
-    <!-- Center Transport Controls: Rewind, Play/Pause, Fast-Forward -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -88,7 +86,6 @@
             android:src="@drawable/ic_forward_10" />
     </LinearLayout>
 
-    <!-- Bottom Progress & Time -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

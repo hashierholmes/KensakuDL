@@ -17,13 +17,11 @@
         android:paddingTop="36dp"
         android:paddingBottom="24dp">
 
-        <!-- App Logo / Mascot -->
         <ImageView
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:src="@drawable/ic_splash_logo" />
 
-        <!-- Title & Dynamic Version -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,7 +46,6 @@
             android:layout_marginTop="12dp"
             android:background="@color/accent_border" />
 
-        <!-- Description -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +57,6 @@
             android:textColor="@color/text_muted"
             android:textSize="12.5sp" />
 
-        <!-- Info Card Container -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -69,7 +65,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Row 1: Package -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -143,7 +138,6 @@
                 android:layout_marginVertical="6dp"
                 android:background="#1E202B" />
 
-            <!-- Row 3: Open Source Status -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -175,7 +169,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- View on GitHub Button -->
         <LinearLayout
             android:id="@+id/btnViewGithub"
             android:layout_width="match_parent"
@@ -203,14 +196,12 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Spacer -->
         <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:minHeight="32dp" />
 
-        <!-- Footer -->
         <TextView
             android:id="@+id/tvFooter"
             android:layout_width="wrap_content"
