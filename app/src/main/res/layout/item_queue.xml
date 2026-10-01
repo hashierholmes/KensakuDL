@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:layout_marginEnd="4dp"
+     android:layout_marginVertical="3dp"
+     android:orientation="vertical"
+     android:layout_marginStart="8dp">
+
+    <LinearLayout
+         android:layout_height="48dp"
+         android:layout_width="match_parent"
+         android:visibility="gone"
+         android:background="@drawable/bg_card"
+         android:gravity="center_vertical"
+         android:orientation="horizontal"
+         android:paddingHorizontal="12dp"
+         android:id="@+id/layoutCompletedRow">
+
+        <ImageView
+             android:layout_height="20dp"
+             android:layout_width="20dp"
+             android:src="@drawable/ic_play_arrow" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             android:ellipsize="end"
+             android:textSize="13sp"
+             android:textColor="@color/text_primary"
+             android:layout_marginStart="10dp"
+             android:maxLines="1"
+             android:layout_weight="1"
+             android:id="@+id/tvCompletedEpisodeName" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:background="@drawable/bg_pill"
+             android:paddingVertical="2dp"
+             android:textSize="11sp"
+             android:textColor="@color/text_muted"
+             android:paddingHorizontal="6dp"
+             android:id="@+id/tvCompletedSizeBadge" />
+
+        <ImageButton
+             android:layout_height="32dp"
+             android:layout_width="32dp"
+             android:src="@drawable/ic_trash"
+             android:background="?android:attr/selectableItemBackgroundBorderless"
+             android:layout_marginStart="8dp"
+             android:id="@+id/btnTrashCompleted" />
+
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:visibility="visible"
+         android:background="@drawable/bg_card"
+         android:padding="12dp"
+         android:orientation="vertical"
+         android:id="@+id/layoutActiveCard">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:gravity="center_vertical"
+             android:orientation="horizontal">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:ellipsize="end"
+                     android:textSize="13sp"
+                     android:textColor="@color/text_primary"
+                     android:maxLines="1"
+                     android:id="@+id/tvQueueAnimeTitle"
+                     android:textStyle="bold" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="12sp"
+                     android:textColor="@color/text_secondary"
+                     android:id="@+id/tvQueueEpisodeName" />
+
+            </LinearLayout>
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:background="@drawable/bg_pill"
+                 android:paddingVertical="2dp"
+                 android:textSize="11sp"
+                 android:textColor="@color/text_secondary"
+                 android:paddingHorizontal="6dp"
+                 android:id="@+id/tvQueueStatus"
+                 android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ProgressBar
+             android:layout_height="6dp"
+             android:layout_width="match_parent"
+             android:progressTint="@color/accent_maroon"
+             style="?android:attr/progressBarStyleHorizontal"
+             android:layout_marginTop="8dp"
+             android:id="@+id/pbQueueDownload" />
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:gravity="center_vertical"
+             android:orientation="horizontal"
+             android:layout_marginTop="6dp">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:textSize="11sp"
+                 android:textColor="@color/text_muted"
+                 android:layout_weight="1"
+                 android:id="@+id/tvQueueProgressInfo"
+                 android:text="Progress: 0% • 0 MB" />
+
+            <Button
+                 android:layout_height="32dp"
+                 android:layout_width="wrap_content"
+                 android:textSize="11sp"
+                 android:textColor="@color/text_primary"
+                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                 android:paddingHorizontal="8dp"
+                 android:id="@+id/btnActionPrimary"
+                 android:text="Start" />
+
+            <Button
+                 android:layout_height="32dp"
+                 android:layout_width="wrap_content"
+                 android:textSize="11sp"
+                 android:textColor="@color/color_red"
+                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                 android:layout_marginStart="4dp"
+                 android:paddingHorizontal="8dp"
+                 android:id="@+id/btnActionSecondary"
+                 android:text="Cancel" />
+
+        </LinearLayout>
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:visibility="gone"
+             android:textSize="11sp"
+             android:textColor="@color/color_red"
+             android:layout_marginTop="4dp"
+             android:id="@+id/tvQueueError" />
+
+    </LinearLayout>
+
+</LinearLayout>

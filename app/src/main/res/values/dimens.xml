@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Pull icon and text tightly together -->
+    <dimen name="design_bottom_navigation_margin">0dp</dimen>
+    <dimen name="m3_bottom_nav_item_padding_bottom">0dp</dimen>
+    <dimen name="m3_navigation_item_active_indicator_height">26dp</dimen>
+    <dimen name="m3_navigation_item_active_indicator_width">48dp</dimen>
+    <dimen name="m3_navigation_item_active_indicator_margin_horizontal">0dp</dimen>
+    <dimen name="m3_navigation_item_icon_margin_top">0dp</dimen>
+    <dimen name="m3_navigation_item_label_margin_top">0dp</dimen>
+    <dimen name="m3_navigation_item_label_margin_bottom">0dp</dimen>
+</resources>

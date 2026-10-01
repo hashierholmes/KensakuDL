@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/accent_maroon</item>
+        <item name="colorPrimaryVariant">#000000</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:statusBarColor">@color/bg_surface</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/header_bg</item>
+
+        <!-- Native Android 12+ Splashscreen attributes -->
+        <item name="android:windowSplashScreenBackground" tools:targetApi="s">@color/bg_surface</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@drawable/ic_splash_logo</item>
+        <item name="android:windowSplashScreenIconBackgroundColor" tools:targetApi="s">@android:color/transparent</item>
+    </style>
+
+    <!-- Sleek pill indicator wrapping the larger icon -->
+    <style name="CustomNavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/accent_dim</item>
+        <item name="android:width">48dp</item>
+        <item name="android:height">26dp</item>
+    </style>
+
+    <!-- Tight typography without internal font padding -->
+    <style name="BottomNavLabel" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    
+    <!-- KensakuDL Dark Dialog Theme -->
+    <style name="KensakuDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:background">@color/card_surface</item>
+        <item name="colorSurface">@color/card_surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DialogDestructiveButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DialogCancelButton</item>
+    </style>
+
+    <style name="DialogDestructiveButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/color_red</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DialogCancelButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+    
+    <!-- Immersive Video Player Theme -->
+    <style name="PlayerTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

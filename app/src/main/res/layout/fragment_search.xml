@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@color/bg_surface"
+     android:fillViewport="true"
+     android:clickable="true"
+     android:focusable="true">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:padding="12dp"
+         android:orientation="vertical">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:orientation="horizontal">
+
+            <EditText
+                 android:layout_height="48dp"
+                 android:layout_width="0dp"
+                 android:imeOptions="actionSearch"
+                 android:background="@drawable/bg_card"
+                 android:hint="@string/search_hint"
+                 android:textColorHint="@color/text_muted"
+                 android:textSize="14sp"
+                 android:textColor="@color/text_primary"
+                 android:paddingHorizontal="14dp"
+                 android:layout_weight="1"
+                 android:inputType="text"
+                 android:id="@+id/etSearchQuery" />
+
+            <Button
+                 android:layout_height="48dp"
+                 android:layout_width="wrap_content"
+                 android:textSize="13sp"
+                 android:backgroundTint="@color/accent_maroon"
+                 android:textColor="@color/text_primary"
+                 android:layout_marginStart="8dp"
+                 android:id="@+id/btnSearch"
+                 android:text="@string/search_btn" />
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="8dp"
+             android:gravity="center_vertical"
+             android:orientation="horizontal"
+             android:layout_marginTop="16dp"
+             android:id="@+id/layoutDiscoverHeader">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:textSize="18sp"
+                 android:textColor="@color/text_primary"
+                 android:layout_weight="1"
+                 android:id="@+id/tvSectionTitle"
+                 android:text="@string/discover_title"
+                 android:textStyle="bold" />
+
+            <Button
+                 android:layout_height="40dp"
+                 android:layout_width="wrap_content"
+                 android:textSize="12sp"
+                 android:strokeColor="@color/border_line"
+                 android:textColor="@color/text_primary"
+                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                 android:id="@+id/btnRandomize"
+                 android:visibility="gone"
+                 android:text="@string/randomize" />
+
+        </LinearLayout>
+
+        <ProgressBar
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:visibility="gone"
+             android:layout_margin="16dp"
+             android:indeterminateTint="@color/accent_maroon"
+             android:id="@+id/progressBar"
+             android:layout_gravity="center_horizontal" />
+
+        <androidx.recyclerview.widget.RecyclerView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:nestedScrollingEnabled="false"
+             android:id="@+id/rvAnimeGrid" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

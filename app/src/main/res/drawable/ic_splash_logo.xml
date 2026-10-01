@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- "K" in Pure White (#FFFFFF) - Proportionately Smaller -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M23.5,40 H28 V60 H23.5 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M28,52 L35,40 H40.5 L31,55 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M29.5,53 L35,60 H41 L33.3,49.5 Z" />
+
+    <!-- "." in Pure White (#FFFFFF) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M43,56.5 H46.5 V60 H43 Z" />
+
+    <!-- "D" in KensakuDL Maroon (#A4384F) -->
+    <path
+        android:fillColor="#A4384F"
+        android:fillType="evenOdd"
+        android:pathData="M49.5,40 H57 C61.3,40 63.5,43.5 63.5,50 C63.5,56.5 61.3,60 57,60 H49.5 Z M54,44.2 V55.8 H56.7 C58.9,55.8 59.7,53.5 59.7,50 C59.7,46.5 58.9,44.2 56.7,44.2 Z" />
+
+    <!-- "L" in KensakuDL Maroon (#A4384F) -->
+    <path
+        android:fillColor="#A4384F"
+        android:pathData="M66.5,40 H71 V55.5 H77 V60 H66.5 Z" />
+</vector>

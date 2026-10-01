@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@color/bg_surface"
+     android:clickable="true"
+     android:padding="12dp"
+     android:orientation="vertical"
+     android:focusable="true">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:gravity="center_vertical"
+         android:orientation="horizontal">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             android:textSize="26sp"
+             android:textColor="@color/text_primary"
+             android:layout_weight="1"
+             android:text="@string/download_queue"
+             android:textStyle="bold" />
+
+        <Button
+             android:layout_height="38dp"
+             android:layout_width="wrap_content"
+             android:visibility="gone"
+             android:textSize="11sp"
+             android:strokeColor="@color/border_line"
+             android:textColor="@color/text_secondary"
+             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+             android:id="@+id/btnClearFinished"
+             android:text="@string/clear_finished" />
+
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:gravity="center_vertical"
+         android:alpha="0.6"
+         android:orientation="horizontal"
+         android:layout_marginTop="4dp">
+
+        <ImageView
+             android:layout_height="15dp"
+             android:layout_width="15dp"
+             android:src="@drawable/ic_folder_download"
+             android:contentDescription="@null" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="12sp"
+             android:textColor="@color/text_secondary"
+             android:layout_marginStart="5dp"
+             android:text="Saved to: Download/KensakuDL" />
+
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:orientation="horizontal"
+         android:layout_marginTop="8dp">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="12sp"
+             android:textColor="@color/text_secondary"
+             android:id="@+id/tvTotal"
+             android:text="Total: 0" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="12sp"
+             android:textColor="@color/color_green"
+             android:layout_marginStart="16dp"
+             android:id="@+id/tvDone"
+             android:text="Done: 0" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="12sp"
+             android:textColor="@color/color_red"
+             android:layout_marginStart="16dp"
+             android:id="@+id/tvFailed"
+             android:text="Failed: 0" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="12sp"
+             android:textColor="@color/color_yellow"
+             android:layout_marginStart="16dp"
+             android:id="@+id/tvSkipped"
+             android:text="Skipped: 0" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:layout_marginTop="12dp"
+         android:id="@+id/rvQueue" />
+
+</LinearLayout>
