@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/bg_gloss_surface">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp" android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@id/layoutDownloadBar">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingBottom="24dp">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="226dp">
+                <ImageView android:id="@+id/ivSeriesBanner" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:background="@drawable/bg_gloss_poster" android:clipToOutline="true" android:contentDescription="Anime banner" android:src="@drawable/bg_pill" />
+                <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_series_banner_gradient" />
+                <Button android:id="@+id/btnBack" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_gravity="top|start" android:layout_margin="12dp" android:text="‹  BACK" android:textSize="11sp" android:textColor="#FFFFFF" android:backgroundTint="#AA171A27" />
+                <TextView android:id="@+id/tvHeroTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:paddingStart="18dp" android:paddingEnd="18dp" android:paddingBottom="18dp" android:textColor="#FFFFFF" android:textSize="25sp" android:textStyle="bold" android:maxLines="2" />
+            </FrameLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="16dp" android:gravity="top">
+                <ImageView android:id="@+id/ivSeriesCover" android:layout_width="112dp" android:layout_height="158dp" android:scaleType="centerCrop" android:background="@drawable/bg_gloss_poster" android:clipToOutline="true" android:elevation="8dp" android:contentDescription="Anime cover" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:paddingStart="14dp">
+                    <TextView android:id="@+id/tvSeriesTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/tvMetaSummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:textColor="#B6BDD0" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/bg_pill" android:paddingHorizontal="9dp" android:paddingVertical="5dp" android:textColor="@color/accent_hover" android:textSize="11sp" />
+                    <TextView android:id="@+id/tvYear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="gone" />
+                    <TextView android:id="@+id/tvType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="gone" />
+                    <TextView android:id="@+id/tvSeason" android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="gone" />
+                    <TextView android:id="@+id/tvGenres" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="#A9B2C7" android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp" android:text="ABOUT THIS ANIME" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold" />
+            <TextView android:id="@+id/tvDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:paddingTop="7dp" android:paddingBottom="12dp" android:textColor="#B6BDD0" android:textSize="13sp" android:lineSpacingExtra="3dp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingTop="4dp" android:paddingBottom="14dp" android:gravity="center_vertical" android:visibility="gone">
+                <Button android:id="@+id/btnWatchMode" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="WATCH" android:textColor="#FFFFFF" android:backgroundTint="@color/accent_maroon" />
+                <Button android:id="@+id/btnDownloadMode" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:layout_marginStart="10dp" android:text="DOWNLOAD" android:textColor="#FFFFFF" android:backgroundTint="@color/accent_maroon" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingTop="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="EPISODES" android:textSize="14sp" android:textColor="#FFFFFF" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AUDIO" android:textSize="10sp" android:textColor="#A9B2C7" android:layout_marginEnd="8dp" />
+                <Spinner android:id="@+id/spinnerTrack" android:layout_width="104dp" android:layout_height="38dp" android:background="@drawable/bg_pill" android:paddingHorizontal="8dp" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/layoutDownloadTools" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingTop="10dp">
+                <TextView android:id="@+id/tvEpisodeCount" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textColor="#A9B2C7" android:textSize="12sp" />
+                <Button android:id="@+id/btnSelectAll" android:layout_width="wrap_content" android:layout_height="34dp" android:text="ALL" android:textSize="10sp" android:textColor="#FFFFFF" android:backgroundTint="@color/accent_maroon" />
+                <Button android:id="@+id/btnClear" android:layout_width="wrap_content" android:layout_height="34dp" android:layout_marginStart="6dp" android:text="CLEAR" android:textSize="10sp" android:textColor="#FFFFFF" android:backgroundTint="#252A3B" />
+            </LinearLayout>
+            <ProgressBar android:id="@+id/pbEpisodes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_margin="18dp" android:visibility="gone" android:indeterminateTint="@color/accent_maroon" />
+            <TextView android:id="@+id/tvNoEpisodes" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="20dp" android:gravity="center" android:textColor="#A9B2C7" android:textSize="13sp" android:visibility="gone" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvEpisodes" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" android:paddingHorizontal="13dp" android:paddingTop="10dp" android:clipToPadding="false" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout android:id="@+id/layoutDownloadBar" android:layout_width="0dp" android:layout_height="64dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:background="@drawable/bg_gloss_card" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent">
+        <TextView android:id="@+id/tvSelectedCount" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="0 episodes selected" android:textColor="#FFFFFF" android:textSize="12sp" />
+        <Button android:id="@+id/btnDownloadSelected" android:layout_width="wrap_content" android:layout_height="44dp" android:enabled="false" android:text="DOWNLOAD SELECTED" android:textSize="11sp" android:textColor="#FFFFFF" android:backgroundTint="@color/accent_maroon" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

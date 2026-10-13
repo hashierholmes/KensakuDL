@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:minHeight="58dp" android:layout_margin="4dp" android:padding="8dp"
+    android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_pill">
+    <TextView android:id="@+id/tvTileNumber" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center" android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold" />
+    <TextView android:id="@+id/tvEpisodeTitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="3dp" android:maxLines="2" android:ellipsize="end" android:gravity="center_vertical"
+        android:textColor="#B6BDD0" android:textSize="12sp" android:visibility="gone" />
+</LinearLayout>

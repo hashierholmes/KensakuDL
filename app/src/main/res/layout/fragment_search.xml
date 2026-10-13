@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gloss_surface"
+        android:fillViewport="true">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="12dp"
+                android:background="@drawable/bg_gloss_home_card">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KensakuDL"
+                    android:textColor="@color/accent_hover"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.18"
+                    android:textSize="12sp" />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Find your next anime."
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="24sp" />
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="14dp">
+                <EditText
+                        android:id="@+id/etSearchQuery"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_gloss_card"
+                        android:hint="Search anime titles..."
+                        android:textColorHint="@color/text_muted"
+                        android:textColor="@color/text_primary"
+                        android:paddingHorizontal="14dp"
+                        android:singleLine="true"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text" />
+                <Button
+                        android:id="@+id/btnSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="8dp"
+                        android:text="Search"
+                        android:textColor="@color/text_primary"
+                        android:backgroundTint="@color/accent_maroon" />
+            </LinearLayout>
+            <Button
+                    android:id="@+id/btnRandomize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Surprise me"
+                    android:textColor="@color/text_primary"
+                    android:backgroundTint="@color/accent_maroon"
+                    android:visibility="gone" />
+        </LinearLayout>
+        <TextView
+                android:id="@+id/tvSectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="18dp"
+                android:text="Discover anime"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+        <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:indeterminateTint="@color/accent_maroon"
+                android:visibility="gone" />
+        <LinearLayout
+                android:id="@+id/layoutSkeletons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:visibility="gone">
+            <include layout="@layout/item_home_skeleton" />
+            <include layout="@layout/item_home_skeleton" />
+            <include layout="@layout/item_home_skeleton" />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/layoutHomeOffline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginBottom="32dp"
+                android:padding="24dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_gloss_card"
+                android:visibility="gone">
+            <ImageView
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:src="@drawable/ic_broken_globe"
+                    android:contentDescription="No internet connection"
+                    android:scaleType="fitCenter"
+                    android:importantForAccessibility="yes" />
+            <TextView
+                    android:id="@+id/tvOfflineTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="No internet connection"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+            <TextView
+                    android:id="@+id/tvOfflineMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Check your internet connection and try again. You can still enjoy episodes you've already downloaded."
+                    android:textColor="@color/text_muted"
+                    android:textSize="14sp" />
+            <Button
+                    android:id="@+id/btnRetryHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="18dp"
+                    android:text="Try again"
+                    android:textColor="@color/text_primary"
+                    android:backgroundTint="@color/accent_maroon" />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/layoutHomeShelves"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="18dp"
+                    android:text="Popular"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="17sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPopular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false" />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="22dp"
+                    android:text="Top Rated"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="17sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTopRated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false" />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="22dp"
+                    android:text="Top Airing"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="17sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTopAiring"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false" />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="22dp"
+                    android:text="Upcoming"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="17sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvUpcoming"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAnimeGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:nestedScrollingEnabled="false"
+                android:visibility="gone" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
